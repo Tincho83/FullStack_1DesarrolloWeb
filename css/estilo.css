@@ -2,7 +2,7 @@
 *********************************************************
 Autor: MH
 Version: 20231119.1953
-Descripcion: TP #2 (FlexBox, Grid) Desarrollo Web para CoderHouse
+Descripcion: TP #2 (FlexBox, Grid, Bootstrap, Git, GitHub) Desarrollo Web para CoderHouse
 *********************************************************
 estilo.css
 *********************************************************
@@ -495,7 +495,7 @@ Responsive:
         /*
         border: 1px solid #000000;
         */
-        padding: 0px 0px 0px 0px;
+        padding: 60px 0px 0px 0px;
         margin-top: 0px;
         margin-bottom: 0px;
         margin: 0px;
@@ -506,8 +506,8 @@ Responsive:
         /*
         border: 1px solid #ff0000dc;
         */
-        width: 300px;
-        height: 300px;
+        width: 250px;
+        height: 250px;
 
     }
 
@@ -561,12 +561,13 @@ Responsive:
 
     .containerEjemplo {
         width: 100%;
+        padding-left: 10px;
     }
 
     .containerEjemplo_block,
     .containerEjemplo_inline-block {
         width: 100%;
-        padding: 10px;
+        padding: 10px 10px 0px 0px;
         text-align: center;
         background-color: rgba(136, 171, 216, 0.96);
         margin: 10px 0;
@@ -581,10 +582,14 @@ Responsive:
     .contenedorprincipal_contenidoprodfrecuente {
         border-top: 1px solid #000000dc;
         display: block;
+        padding: 0px 10px 0px 10px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .contenedorprincipal_contenidoprodfrecuente_p {
         font-style: italic;
+        padding: 0px 0px 0px 10px;
     }
 
     .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico {
@@ -615,6 +620,10 @@ Responsive:
         margin: 3px 0;
     }
 
+    .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento:hover {
+        border: 3px solid #000000dc;
+    }
+
     .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_pProducto {
         border: 1px solid #000000;
         border-radius: 10%;
@@ -624,6 +633,7 @@ Responsive:
 
         font-size: 9px;
         margin-bottom: 0.2rem;
+        font-weight: bold;
     }
 
     .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_checkbxComparar {
@@ -637,8 +647,8 @@ Responsive:
     }
 
     .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_imgproducto {
-        width: 240px;
-        height: 240px;
+        width: 160px;
+        height: 160px;
         border: 1px solid #000000;
         border-radius: 2%;
 
@@ -649,18 +659,21 @@ Responsive:
         padding-top: 10px;
         font-size: 9px;
         margin-bottom: 0.2rem;
+        visibility: visible;
     }
 
     .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_pModeloProducto {
 
         font-size: 9px;
         margin-bottom: 0.2rem;
+        visibility: visible;
     }
 
     .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_pPrecioProducto {
 
         font-size: 9px;
         margin-bottom: 0.2rem;
+        visibility: visible;
     }
 
     .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_pPagoProducto {
@@ -679,11 +692,19 @@ Responsive:
         background-color: rgba(255, 255, 192, 0.96);
     }
 
+    .contenedorprincipal_divComunicado h3 {
+        text-align: center;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
     .contenedorprincipal_divComunicado h2 {
         text-align: center;
         font-style: normal;
         font-weight: bold;
         font-size: 22px;
+        color: rgba(255, 0, 0, 0.96)
     }
 
     /* Inicio: Pie de Pagina */
@@ -705,7 +726,7 @@ Responsive:
         z-index: 10;
     }
 
-    .piepagina_divflotante:hover{
+    .piepagina_divflotante:hover {
         background-color: #dddddddc;
     }
 
@@ -822,7 +843,7 @@ Responsive:
 
     /* ******************************************* */
 
-    .container {
+    .containergrid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
@@ -879,20 +900,147 @@ Responsive:
 
     /* ******************************************* */
 
+    .container {
+        border: 2px solid black;
+    }
+
+
+    .ul_mediosPago {
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        vertical-align: baseline;
+        list-style: none;
+
+        font-style: normal;
+        font-variant-ligatures: normal;
+        font-variant-caps: normal;
+        font-variant-numeric: inherit;
+        font-variant-east-asian: inherit;
+        font-weight: 400;
+        font-stretch: inherit;
+        font-size: 16px;
+        line-height: inherit;
+        color: rgb(0, 0, 0);
+        letter-spacing: normal;
+        orphans: 2;
+        text-align: start;
+        text-indent: 0px;
+        text-transform: none;
+        white-space: normal;
+        widows: 2;
+        word-spacing: 0px;
+        -webkit-text-stroke-width: 0px;
+        background-color: rgb(255, 255, 255);
+        text-decoration-thickness: initial;
+        text-decoration-style: initial;
+        text-decoration-color: initial;
+    }
 
 
 
 
+    .ul_li_mediosPago {
+        font: inherit;
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+        border-top: none;
+        border-right: 0px;
+        border-bottom: 0px;
+        border-left: 0px;
+        border-image: initial;
+        vertical-align: baseline;
 
+        border-width: 1px 0px 0px;
+        border-top-style: solid;
+        border-right-style: initial;
+        border-bottom-style: initial;
+        border-left-style: initial;
+        border-top-color: rgb(227, 229, 235);
+        border-right-color: initial;
+        border-bottom-color: initial;
+        border-left-color: initial;
+    }
 
+    .ul_li_img_mediosPago {
+        height: 60px;
+        width: 60px;
 
+        font: inherit;
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        vertical-align: baseline;
+    }
 
+    .p_mediosPago {
+        font-family: inherit;
+        box-sizing: border-box;
+        margin: 0px 0px 1em;
+        padding: 0px;
+        border: 0px;
+        font-style: inherit;
+        font-variant: inherit;
+        font-weight: inherit;
+        font-stretch: inherit;
+        font-size: inherit;
+        line-height: 1.4285em;
+        vertical-align: baseline;
+        font-weight: bold;
+    }
 
+    .p_mediosPago_nobold {
+        font-family: inherit;
+        box-sizing: border-box;
+        margin: 0px 0px 1em;
+        padding: 0px;
+        border: 0px;
+        font-style: inherit;
+        font-variant: inherit;
+        font-weight: inherit;
+        font-stretch: inherit;
+        font-size: inherit;
+        line-height: 1.4285em;
+        vertical-align: baseline;
+    }
 
+    .contenedorprincipal_iniciosesionregistro {
+        justify-content: space-between;
+    }
 
+    .iniciosesioncuenta {
+        border: 1px solid rgba(80, 80, 80, 0.96);
+        padding: 10px 20px 10px 20px;
+    }
 
+.barraorden {
+    border: 1px solid rgba(0, 0, 0, 0.96);
 
+}
 
+.containerbarraorden{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    align-content:flex-start;
+    height:3vh; /*Este valor lo puedes omitir si la altura de tu componente esta definida*/
+    border: 1px solid rgba(0, 0, 0, 0.96);
+  }
+
+  .item-0, .item-1, .item-2{
+    order:0;
+    flex:0 1 auto;
+    align-self:auto;
+    height:auto;
+    width:auto;
+    border: 1px solid rgba(0, 0, 0, 0.96);
+
+  }
 
 
 
@@ -982,8 +1130,8 @@ Responsive:
     }
 
     .carousel-inner {
-        width: 400px;
-        height: 400px;
+        width: 300px;
+        height: 300px;
 
     }
 
@@ -999,6 +1147,12 @@ Responsive:
         font-size: 14px;
     }
 
+    .contenedorprincipal {
+
+        padding: 10px 0px 0px 0px;
+
+    }
+
     .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento {
         border: 1px solid #cd2626;
         width: 100%;
@@ -1011,11 +1165,30 @@ Responsive:
     }
 
     .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_imgproducto {
-        width: 240px;
-        height: 240px;
+        width: 220px;
+        height: 220px;
         border: 1px solid #000000;
 
     }
+
+    .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_pMarcaProducto {
+
+        visibility: visible;
+        font-weight: bold;
+    }
+
+    .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_pModeloProducto {
+
+        visibility: visible;
+        font-weight: bold;
+    }
+
+    .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_pPrecioProducto {
+
+        visibility: visible;
+        font-weight: bold;
+    }
+
 
 
     .piepagina_divflotante_imgWhatsapps {
@@ -1128,8 +1301,8 @@ Responsive:
     }
 
     .carousel-inner {
-        width: 500px;
-        height: 500px;
+        width: 350px;
+        height: 350px;
 
     }
 
@@ -1141,8 +1314,8 @@ Responsive:
     }
 
     .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_imgproducto {
-        width: 330px;
-        height: 330px;
+        width: 290px;
+        height: 290px;
         border: 1px solid #000000;
 
     }

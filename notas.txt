@@ -1,6 +1,42 @@
-Maquetado
+TP1
+Maquetado y Wireframe de 5 paginas
+	index.html y otras 4 [contacto, ayuda, productos, cuenta, carrito, financiacion, etc]) para version desktop y Mobile.
+
 Prototipado HTML
-Estilos CSS
+	index.html y otras 4
+
+Etiquetas semanticas obligatorias
+	(header, main, footer)
+
+
+Etiquetas contenedoras
+
+
+Etiquetas multimedia (obligatorio propiedades por CSS y uso de descripcion alt (<img>))
+
+
+Etiquetas de texto 
+
+
+Estilo CSS linkeada (con modificadores de texto, colores, listas)
+
+
+Codigo identado
+
+
+Enlaces funcionan
+
+
+rutas relativas
+
+
+
+
+
+TP2 (Se agrega al TP1)
+Resposive 320px 768px 1024px
 FlexBox
 Grid
 Bootstrap
+Git
+Git Hub
