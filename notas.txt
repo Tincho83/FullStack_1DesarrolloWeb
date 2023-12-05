@@ -42,7 +42,7 @@ TP2 (Se agrega al TP1)
 Se agrega contenido a la web
 
 Responsive First Mobile 320px, Tablet 768px Desktop 1024px
-Responsive en todas las paginas (indes.html, productos.html, financiacon.html...)
+Responsive en todas las paginas (index.html, productos.html, financiacion.html...)
 
 a proposito solo para esta entrega, en modo responsibe mobile se muestra el mensaje 
 "Actualmente estamos realizando un mnatenimiento...", en el proximo TP estaria el
