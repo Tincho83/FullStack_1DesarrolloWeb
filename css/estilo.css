@@ -1016,33 +1016,41 @@ Responsive:
         padding: 10px 20px 10px 20px;
     }
 
-.barraorden {
-    border: 1px solid rgba(0, 0, 0, 0.96);
+    .barraorden {
+        border: 1px solid rgba(0, 0, 0, 0.96);
 
-}
+    }
 
-.containerbarraorden{
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    justify-content:center;
-    align-items:center;
-    align-content:flex-start;
-    height:3vh; /*Este valor lo puedes omitir si la altura de tu componente esta definida*/
-    border: 1px solid rgba(0, 0, 0, 0.96);
-  }
+    .containerbarraorden {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: flex-start;
+        height: 3vh;
+        /*Este valor lo puedes omitir si la altura de tu componente esta definida*/
+        border: 1px solid rgba(0, 0, 0, 0.96);
+    }
 
-  .item-0, .item-1, .item-2{
-    order:0;
-    flex:0 1 auto;
-    align-self:auto;
-    height:auto;
-    width:auto;
-    border: 1px solid rgba(0, 0, 0, 0.96);
+    .item-0,
+    .item-1,
+    .item-2 {
+        order: 0;
+        flex: 0 1 auto;
+        align-self: auto;
+        height: auto;
+        width: auto;
+        border: 1px solid rgba(0, 0, 0, 0.96);
 
-  }
+    }
 
-
+    .framedepaginas {
+        height: 60vh;
+        width: 70vw;
+        /*     position: relative;
+    border-style:none; */
+    }
 
 }
 
