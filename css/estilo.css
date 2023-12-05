@@ -1045,6 +1045,10 @@ Responsive:
 
     }
 
+    .contenedorprincipal_ayuda{
+        margin-top: 40px;
+    }
+
     .framedepaginas {
         height: 60vh;
         width: 70vw;
