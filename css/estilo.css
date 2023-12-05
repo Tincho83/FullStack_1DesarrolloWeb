@@ -1046,11 +1046,11 @@ Responsive:
     }
 
     .contenedorprincipal_ayuda{
-        margin-top: 40px;
+        margin-top: 35px;
     }
 
     .contenedorprincipal_ayuda_aside{
-        margin-top: 40px;
+        margin-top: 35px;
     }
 
     .contenedorprincipal_ayuda_aside, h3{
@@ -1060,7 +1060,7 @@ Responsive:
 
     .framedepaginas {
         height: 60vh;
-        width: 90vw;
+        width: 96vw;
         /*     position: relative;
     border-style:none; */
     }
