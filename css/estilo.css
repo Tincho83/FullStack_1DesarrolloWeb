@@ -1053,7 +1053,7 @@ Responsive:
         margin-top: 40px;
     }
 
-    .contenedorprincipal_ayuda_aside h3{
+    .contenedorprincipal_ayuda_aside, h3{
         margin-top: 40px;
         padding-top: 20px;
     }
