@@ -1,0 +1,11 @@
+@import "../base/variables";
+@import "../partials/mediaqueries";
+@import "../base/mixins";
+
+    @include pantallaincompatible {
+	
+        .webSite_msjPantallaincompat {
+            visibility: visible;
+        }
+
+    }
