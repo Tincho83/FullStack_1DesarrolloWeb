@@ -33,6 +33,77 @@
     font-family: 'Roboto', sans-serif;
 }
 
+@keyframes animacionsubir {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    14% {
+        transform: scale(1.03, 1.03);
+    }
+
+    28% {
+        transform: scale(1.07, 1.07);
+    }
+
+    43% {
+        transform: scale(1.19, 1.19);
+    }
+
+    57% {
+        transform: scale(1.25, 1.25);
+    }
+
+    73% {
+        transform: scale(1.29, 1.29);
+    }
+
+    89% {
+        transform: scale(1.33, 1.33);
+    }
+
+    100% {
+        transform: scale(1.4, 1.4);
+    }
+
+}
+
+@keyframes animacionwts {
+    0% {
+        transform: rotateX(0deg);
+    }
+
+    14% {
+        transform: rotateX(33deg);
+    }
+
+    28% {
+        transform: rotateX(0deg);
+    }
+
+    43% {
+        transform: rotateX(-33deg);
+    }
+
+    57% {
+        transform: rotateX(0deg);
+    }
+
+    73% {
+        transform: rotateX(22deg);
+    }
+
+    89% {
+        transform: rotateX(-22deg);
+    }
+
+    100% {
+        transform: rotateX(0deg);
+    }
+
+}
+
+
 
 //* Estilo para pantalla con dimensiones menores a Mobile First 320px horizontal */
 @media only screen and (max-width: $dimPantallaIncomp) {
@@ -66,7 +137,8 @@
 
     //* Inicio: Tags y bootstrap */
     body {
-        background-color: $color-celestecielo_usogeneral;
+        /* background-color: $color-celestecielo_usogeneral; */
+        background-image: linear-gradient(to top, $color-celestecielo_usogeneral, $color-celesteuno_usogeneral);
     }
 
     h1 {
@@ -88,7 +160,8 @@
 
     //* Inicio: Cabecera */
     .cabecera {
-        background-color: $color-blancobasico_usogeneral;
+        // background-color: $color-blancobasico_usogeneral;
+        background-image: linear-gradient(to top, $color-grisbasico_usogeneral, $color-blancobasico_usogeneral);
     }
 
     //* Inicio: Estilos Enlaces Superiores */
@@ -187,6 +260,10 @@
 
     }
 
+    .dropdown-menu {
+        background-image: linear-gradient(to top, $color-grisuno_usogeneral, $color-blancobasico_usogeneral);
+    }
+
     //* Inicio Switch Modo Noche */
     //* Switch - caja alrededor del slider */
     .switch {
@@ -232,16 +309,16 @@
 
     //*
     //.slider:before {
-        //    position: absolute;
-        //content: "";
-        //height: 26px;
-        //width: 26px;
-        //left: 4px;
-        //bottom: 4px;
-        //background-color: $color-blancobasico_usogeneral;
-        //-webkit-transition: .4s;
-        //transition: .4s;
-        //}
+    //    position: absolute;
+    //content: "";
+    //height: 26px;
+    //width: 26px;
+    //left: 4px;
+    //bottom: 4px;
+    //background-color: $color-blancobasico_usogeneral;
+    //-webkit-transition: .4s;
+    //transition: .4s;
+    //}
     //*/
 
     input:checked+.slider {
@@ -260,10 +337,10 @@
 
     //*
     //input:checked+.slider:before {
-        //  -webkit-transform: translateX(26px);
-        //-ms-transform: translateX(26px);
-        //transform: translateX(26px);
-        //}
+    //  -webkit-transform: translateX(26px);
+    //-ms-transform: translateX(26px);
+    //transform: translateX(26px);
+    //}
     //*/
 
     //* Redondear slider */
@@ -277,8 +354,8 @@
 
     //*
     //.slider.round:before {
-        //    border-radius: 50%;
-        //}
+    //    border-radius: 50%;
+    //}
     //*/
 
     //* Fin: Switch modo Noche */
@@ -479,7 +556,7 @@
         width: 100%;
         padding: 10px 10px 0px 0px;
         text-align: center;
-        background-color: $color-celestecielo_usogeneral;
+        /*         background-color: $color-celestecielo_usogeneral; */
         margin: 10px 0;
         font-size: 11px;
     }
@@ -521,12 +598,13 @@
         width: 100%;
         padding: 3px 3px 3px 3px;
         text-align: center;
-        background-color: $color-celesteuno_usogeneral;
+        /*       background-color: $color-celesteuno_usogeneral; */
+        background-image: linear-gradient(to top, $color-azuldos_usogeneral, $color-celesteuno_usogeneral);
         border-radius: 1%;
         margin: 3px 0;
 
         &:hover {
-            border: 3px solid $color-negrobasico_usogeneral;
+            border: 1px solid $color-negrobasico_usogeneral;
         }
     }
 
@@ -611,6 +689,7 @@
     .piepagina {
         border: 1px solid $color-negrobasico_usogeneral;
         padding-top: 20px;
+        background-image: linear-gradient(to top, $color-celestecielo_usogeneral, $color-celesteuno_usogeneral);
     }
 
     .piepagina_divflotantesc {
@@ -625,7 +704,12 @@
     }
 
     .piepagina_divflotantesc:hover {
-        background-color: $color-rojobasico_usogeneral;
+        /* background-color: $color-rojobasico_usogeneral; */
+        background-image: radial-gradient(ellipse 25px 60px, $color-blancobasico_usogeneral, $color-rojobasico_usogeneral );
+        animation-name: animacionsubir;
+        animation-duration: 2s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
     }
 
     .piepagina_divflotante_imgsubir {
@@ -643,15 +727,27 @@
         right: 2rem;
         background-color: $color-negrobasico_usogeneral;
         z-index: 10;
+
     }
 
     .piepagina_divflotante:hover {
         background-color: $color-gristres_usogeneral;
+        animation-name: animacionwts;
+        animation-duration: 3s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+
     }
 
     .piepagina_divflotante_imgWhatsapps {
         width: 2rem;
         height: 2rem;
+        z-index: 10;
+    }
+
+    .piepagina_divflotante_imgWhatsapps:hover {
+        width: 3rem;
+        height: 3rem;
         z-index: 10;
     }
 

@@ -1,14 +1,108 @@
+/* $fuenteweb-gral: (
+fuente: 'Roboto', 'sans-serif'
+)
+
+
+$carousel-gral: ( 
+ancho: 250px,
+alto: 250px
+)
+
+
+
+
+
+
+
+$titulo-producto: (
+tamanio: 2rem,
+colorfondo: red,
+decoracion: none
+) */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @media only screen and (max-width: 319px) {
   .webSite_msjPantallaincompat {
     visibility: visible;
   }
 }
+/* $fuenteweb-gral: (
+fuente: 'Roboto', 'sans-serif'
+)
+
+
+$carousel-gral: ( 
+ancho: 250px,
+alto: 250px
+)
+
+
+
+
+
+
+
+$titulo-producto: (
+tamanio: 2rem,
+colorfondo: red,
+decoracion: none
+) */
 /* Comentario se muestra en el compilado */
 * {
   font-family: "Roboto", sans-serif;
 }
 
+@keyframes animacionsubir {
+  0% {
+    transform: scale(1, 1);
+  }
+  14% {
+    transform: scale(1.03, 1.03);
+  }
+  28% {
+    transform: scale(1.07, 1.07);
+  }
+  43% {
+    transform: scale(1.19, 1.19);
+  }
+  57% {
+    transform: scale(1.25, 1.25);
+  }
+  73% {
+    transform: scale(1.29, 1.29);
+  }
+  89% {
+    transform: scale(1.33, 1.33);
+  }
+  100% {
+    transform: scale(1.4, 1.4);
+  }
+}
+@keyframes animacionwts {
+  0% {
+    transform: rotateX(0deg);
+  }
+  14% {
+    transform: rotateX(33deg);
+  }
+  28% {
+    transform: rotateX(0deg);
+  }
+  43% {
+    transform: rotateX(-33deg);
+  }
+  57% {
+    transform: rotateX(0deg);
+  }
+  73% {
+    transform: rotateX(22deg);
+  }
+  89% {
+    transform: rotateX(-22deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
 @media only screen and (max-width: 319px) {
   .webSite_msjPantallaincompat {
     background-color: rgba(255, 255, 192, 0.96);
@@ -31,7 +125,8 @@
     display: none;
   }
   body {
-    background-color: rgba(136, 171, 216, 0.96);
+    /* background-color: $color-celestecielo_usogeneral; */
+    background-image: linear-gradient(to top, rgba(136, 171, 216, 0.96), rgba(173, 216, 230, 0.96));
   }
   h1 {
     font-size: 9px;
@@ -44,7 +139,7 @@
     --bs-dropdown-min-width: 19rem;
   }
   .cabecera {
-    background-color: rgba(255, 255, 255, 0.96);
+    background-image: linear-gradient(to top, rgba(128, 128, 128, 0.96), rgba(255, 255, 255, 0.96));
   }
   .cabecera_divEnlacesHorizontales {
     justify-content: space-between;
@@ -110,6 +205,9 @@
   }
   .cabecera_divPanelWeb_divMenuflex_divMenuDropdown {
     margin-left: 1px;
+  }
+  .dropdown-menu {
+    background-image: linear-gradient(to top, rgba(204, 204, 204, 0.96), rgba(255, 255, 255, 0.96));
   }
   .switch {
     position: relative;
@@ -317,7 +415,7 @@
     width: 100%;
     padding: 10px 10px 0px 0px;
     text-align: center;
-    background-color: rgba(136, 171, 216, 0.96);
+    /*         background-color: $color-celestecielo_usogeneral; */
     margin: 10px 0;
     font-size: 11px;
   }
@@ -351,12 +449,13 @@
     width: 100%;
     padding: 3px 3px 3px 3px;
     text-align: center;
-    background-color: rgba(173, 216, 230, 0.96);
+    /*       background-color: $color-celesteuno_usogeneral; */
+    background-image: linear-gradient(to top, rgba(33, 149, 243, 0.96), rgba(173, 216, 230, 0.96));
     border-radius: 1%;
     margin: 3px 0;
   }
   .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento:hover {
-    border: 3px solid rgba(0, 0, 0, 0.96);
+    border: 1px solid rgba(0, 0, 0, 0.96);
   }
   .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_pProducto {
     border: 1px solid rgba(0, 0, 0, 0.96);
@@ -423,6 +522,7 @@
   .piepagina {
     border: 1px solid rgba(0, 0, 0, 0.96);
     padding-top: 20px;
+    background-image: linear-gradient(to top, rgba(136, 171, 216, 0.96), rgba(173, 216, 230, 0.96));
   }
   .piepagina_divflotantesc {
     display: inline-block;
@@ -435,7 +535,12 @@
     z-index: 10;
   }
   .piepagina_divflotantesc:hover {
-    background-color: rgba(255, 0, 0, 0.96);
+    /* background-color: $color-rojobasico_usogeneral; */
+    background-image: radial-gradient(ellipse 25px 60px, rgba(255, 255, 255, 0.96), rgba(255, 0, 0, 0.96));
+    animation-name: animacionsubir;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
   }
   .piepagina_divflotante_imgsubir {
     width: 2rem;
@@ -454,10 +559,19 @@
   }
   .piepagina_divflotante:hover {
     background-color: rgba(221, 221, 221, 0.96);
+    animation-name: animacionwts;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
   }
   .piepagina_divflotante_imgWhatsapps {
     width: 2rem;
     height: 2rem;
+    z-index: 10;
+  }
+  .piepagina_divflotante_imgWhatsapps:hover {
+    width: 3rem;
+    height: 3rem;
     z-index: 10;
   }
   .piepagina_divcontacto {

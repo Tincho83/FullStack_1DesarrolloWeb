@@ -40,13 +40,15 @@ echo *** que se inicie el proceso de subida ***
 "D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" status
 set /p Input="Ingrese descripcion commit:" 
 "D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" commit -m "Modificacion %Input%"
-"D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" branch
-set /p Inputb="Ingrese branch:" 
-"D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" branch -M %Inputb%
+echo "Crear Rama" "D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" branch "dev"
+"D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" branch -l
+set /p Inputbranch="Ingrese branch:" 
+"D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" branch -M %Inputbranch%
+echo "Moverse entre ramas" "D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" checkout "nombre_rama"
 echo https://github.com/Tincho83/FullStack_1DesarrolloWeb.git
 set /p Inputc="Ingrese URL HTTPS GIT REPOSITORY:" 
 "D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" remote add origin %Inputc%
-"D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" push -u origin %Inputb%
+"D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" push -u origin %Inputbranch%
 echo *** Completado Subiendo Proyecto a GitHub ***
 goto menu
 
@@ -74,3 +76,24 @@ goto menu
 :salir
 exit
 goto EOF
+exit
+
+
+
+echo Dev
+"D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" init
+"D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" checkout dev
+"D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" status
+"D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" add .
+"D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" status
+"D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" commit -m "Modificacion ..."
+"D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" push -u origin dev
+
+echo Master
+"D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" init
+"D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" checkout master
+"D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" status
+"D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" add .
+"D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" status
+"D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" commit -m "Modificacion ..."
+"D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" push -u origin master
