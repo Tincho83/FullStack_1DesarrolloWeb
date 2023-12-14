@@ -11,16 +11,7 @@
 
 
 
-
 // ******* Inicio: Establecer Fuente
-
-//* *** Roboto Offline */
-//@font-face {
-//    font-family: "robotoReg-offline";
-//    src: url("../fonts/Roboto-Regular.ttf");
-//}
-
-
 //*  *** Roboto Online */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 //* ******* Fin: Establecer Fuente */
@@ -36,30 +27,6 @@
 @keyframes animacionsubir {
     0% {
         transform: scale(1, 1);
-    }
-
-    14% {
-        transform: scale(1.03, 1.03);
-    }
-
-    28% {
-        transform: scale(1.07, 1.07);
-    }
-
-    43% {
-        transform: scale(1.19, 1.19);
-    }
-
-    57% {
-        transform: scale(1.25, 1.25);
-    }
-
-    73% {
-        transform: scale(1.29, 1.29);
-    }
-
-    89% {
-        transform: scale(1.33, 1.33);
     }
 
     100% {
@@ -138,8 +105,61 @@
     //* Inicio: Tags y bootstrap */
     body {
         /* background-color: $color-celestecielo_usogeneral; */
-        background-image: linear-gradient(to top, $color-celestecielo_usogeneral, $color-celesteuno_usogeneral);
+        background-image: linear-gradient(to top, $color-celesteuno_usogeneral, $color-celestecielo_usogeneral);
     }
+
+    @function random_range($min, $max) {
+        $rand: random();
+        $random_range: $min + floor($rand * (($max - $min) + 1));
+        @return $random_range;
+    }
+
+    .snow_wrap {
+        width: 10px;
+        overflow: hidden;
+    }
+
+    .snow {
+        $total: 200;
+        position: absolute;
+        overflow: hidden;
+        width: 5px;
+        height: 5px;
+        background: rgba(255, 255, 255, 0.96);
+        border-radius: 50%;
+
+        @for $i from 1 through $total {
+            $random-x: random(1000000) * 0.0001vw;
+            $random-offset: random_range(-100000, 100000) * 0.0001vw;
+            $random-x-end: $random-x (+$random-offset);
+            $random-x-end-yoyo: $random-x + (calc($random-offset / 2));
+            $random-yoyo-time: calc(random_range(30000, 80000) / 100000);
+            $random-yoyo-y: $random-yoyo-time * 100vh;
+            $random-scale: random(10000) * 0.0001;
+            $fall-duration: random_range(10, 30) * 1s;
+            $fall-delay: random(30) * -1s;
+
+            &:nth-child(#{$i}) {
+                opacity: random(10000) * 0.0001;
+                transform: translate($random-x, -10px) scale($random-scale);
+                animation: fall-#{$i} $fall-duration $fall-delay linear infinite;
+            }
+
+            @keyframes fall-#{$i} {
+                #{percentage($random-yoyo-time)} {
+                    transform: translate($random-x-end, $random-yoyo-y) scale($random-scale);
+                }
+
+                to {
+                    transform: translate($random-x-end-yoyo, 100vh) scale($random-scale);
+                }
+            }
+        }
+    }
+
+
+
+
 
     h1 {
         font-size: 9px;
@@ -163,6 +183,8 @@
         // background-color: $color-blancobasico_usogeneral;
         background-image: linear-gradient(to top, $color-grisbasico_usogeneral, $color-blancobasico_usogeneral);
     }
+
+
 
     //* Inicio: Estilos Enlaces Superiores */
     .cabecera_divEnlacesHorizontales {
@@ -205,13 +227,6 @@
 
     }
 
-    //*
-    //.cabecera_divEnlacesHorizontales_ul_li_a:hover {
-    //    color: $color-azulclaro_a_hover;
-    //    font-weight: bold;
-    //}
-    //*/
-
     .cabecera_divEnlacesHorizontales_ul_li_a_img {
         width: 20px;
         height: 20px;
@@ -237,12 +252,6 @@
         align-content: space-between;
         border-bottom: 1px solid $color-azuluno_usogeneral;
 
-        //* Fijo al scrollear
-        // position: fixed;
-        // z-index: 2;
-        // background-color: $color-blancobasico_usogeneral;
-        // width: 100%;
-        // */
     }
 
     //* Inicio: Panel Web - Menu Hamburguesa */
@@ -307,20 +316,6 @@
         }
     }
 
-    //*
-    //.slider:before {
-    //    position: absolute;
-    //content: "";
-    //height: 26px;
-    //width: 26px;
-    //left: 4px;
-    //bottom: 4px;
-    //background-color: $color-blancobasico_usogeneral;
-    //-webkit-transition: .4s;
-    //transition: .4s;
-    //}
-    //*/
-
     input:checked+.slider {
         background-color: $color-azuldos_usogeneral;
 
@@ -335,13 +330,7 @@
         box-shadow: 0 0 1px $color-azuldos_usogeneral;
     }
 
-    //*
-    //input:checked+.slider:before {
-    //  -webkit-transform: translateX(26px);
-    //-ms-transform: translateX(26px);
-    //transform: translateX(26px);
-    //}
-    //*/
+
 
     //* Redondear slider */
     .slider.round {
@@ -352,11 +341,6 @@
         }
     }
 
-    //*
-    //.slider.round:before {
-    //    border-radius: 50%;
-    //}
-    //*/
 
     //* Fin: Switch modo Noche */
 
@@ -709,8 +693,10 @@
         animation-name: animacionsubir;
         animation-duration: 2s;
         animation-timing-function: ease-in;
-        animation-iteration-count: infinite;
+        animation-iteration-count: 1;
     }
+
+
 
     .piepagina_divflotante_imgsubir {
         width: 2rem;

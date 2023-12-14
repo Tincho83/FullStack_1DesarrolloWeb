@@ -1,8 +1,8 @@
 <!--
 *********************************************************
 Autor: MH
-Version: 20231109.1953
-Descripcion: TP #2 (FlexBox, Grid, Bootstrap, Git, GitHub) Desarrollo Web para CoderHouse
+Version: 20231216.1953
+Descripcion: TP #3 (SASS SCSS ANOMACIONES) Desarrollo Web para CoderHouse
 *********************************************************
 index.html 
 https://tincho83.github.io/FullStack_1DesarrolloWeb/
@@ -29,10 +29,11 @@ https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/m
     <!-- link Fuente TrueFont Online -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
-        
-    <!-- link CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+
+    <!-- link CSS Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <!-- <link rel="preload" href="css/estilo.css" as="style"> -->
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
@@ -50,13 +51,41 @@ https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/m
     <div class="webSite_msjPantallaincompat">Use una pantalla que tenga 320px o superior en horizontal.</div>
     <!-- Fin: mensaje si posee una pantalla incompatible -->
 
+        <!-- Inicio: contenedores nieve -->
+    <div class="snow_wrap">
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+    </div>
+<!-- Fin: contenedores nieve -->
 
     <!-- Inicio: Cabecera contiene vinculos superiores horizontales -->
     <header class="cabecera" id="inicio">
 
         <!-- Inicio: vinculos superiores horizontales -->
         <div class="cabecera_divEnlacesHorizontales">
-            <ul class="cabecera_divEnlacesHorizontales_ul">
+            <ul class="cabecera_divEnlacesHorizontales_ul animate__animated animate__backInRight">
                 <li class="cabecera_divEnlacesHorizontales_ul_li">
                     <a href="https://www.correoargentino.com.ar/" class="cabecera_divEnlacesHorizontales_ul_li_a"
                         target="_blank">
@@ -103,8 +132,8 @@ https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/m
 
                 <!-- Inicio: Menu Dropdown !!! Usando BootStrat -->
                 <div class="cabecera_divPanelWeb_divMenuflex_divMenuDropdown">
-                    <a class="btn btn-secondary dropdown-toggle animate__animated animate__lightSpeedInLeft" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                    <a class="btn btn-secondary dropdown-toggle animate__animated animate__lightSpeedInLeft" href="#"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Menu
                     </a>
 
@@ -134,7 +163,7 @@ https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/m
                         <li>
                             <!-- Inicio: Switch Modo Noche -->
                             <label class="switch">
-                                <input type="checkbox">
+                                <input type="checkbox" name="temaui_switch">
                                 <span class="slider round"></span>
                             </label>
                             <span class="texto">Modo Noche</span>
@@ -166,7 +195,6 @@ https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/m
             <!-- Inicio: SubPanel -->
             <div class="cabecera_divPanelWeb_divMenuflex">
                 <!-- Separador -->
-                <!-- <div class="cabecera_separadorpanelizq"></div> -->
 
                 <!-- Inicio: Panel Cuenta y Carrito -->
                 <div class="cabecera_divPanelWeb_divMenuflex_divPanelCuentaCarrito">
@@ -204,8 +232,6 @@ https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/m
                 </div>
                 <!-- Fin: Panel Cuenta y Carrito -->
 
-                <!-- Separador -->
-                <!-- <div class="cabecera_separadorpanelder"></div>                             -->
             </div>
             <!-- Fin: SubPanel -->
 
@@ -242,17 +268,6 @@ https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/m
                                 alt="Procesadores Intel de 14ava generacion">
                         </div>
                     </div>
-                    <!-- 
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Anterior</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Proximo</span>
-                    </button> -->
                 </div>
             </div>
             <div class="contenedorprincipal_divcontenedorFlex_elementosflex"></div>
@@ -399,7 +414,7 @@ https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/m
     <footer class="piepagina">
 
         <!-- Inicio: Ir Arriba Flotante -->
-        <div class="piepagina_divflotantesc animate__animated animate__backInRight">
+        <div class="piepagina_divflotantesc">
             <a href="#inicio" target="_self">
                 <img src="imgs/subir.png" alt="ir a inicio superior de la pagina"
                     class="piepagina_divflotante_imgsubir">
@@ -409,7 +424,7 @@ https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/m
         <!-- Fin: Ir Arriba Flotante -->
 
         <!-- Inicio: Contacto WhatsApps Flotante -->
-        <div class="piepagina_divflotante animate__animated animate__backInRight">
+        <div class="piepagina_divflotante">
             <a href="https://api.whatsapp.com/send?phone=5435156056156&text=%C2%A1Hola%21+Estoy+en+la+tienda+y+quiero+pedir+m%C3%A1s+informaci%C3%B3n.&type=phone_number&app_absent=0"
                 target="_blank">
                 <img src="imgs/whatsapp.png" alt="Contacto Whastapp" class="piepagina_divflotante_imgWhatsapps">
@@ -518,25 +533,3 @@ https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/m
 </body>
 
 </html>
-
-<!--
-*********************************************************
-Autor: MH
-Version: 20231109.1953
-Descripcion: TP #2 (FlexBox, Grid) Desarrollo Web para CoderHouse
-Realizado:
-TP #1: 
-Maquetado
-Prototipado HTML
-Estilos CSS.
-Notas:
-HTML: Dar mas contenido a las paginas que les falta. Borrar el codigo comentado en desuso. Evita el nombre de carpetas en mayuscula.
-
-Atajos VisualStudio Code:
-alt shift a (comentar)
-alt shift f (identar)
-ctrl s (guardar)
-*********************************************************
-index.html
-*********************************************************
--->
