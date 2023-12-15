@@ -265,12 +265,23 @@
         flex: 0 1 auto;
         align-self: auto;
         @include tamanio(auto, auto);
-        border: 1px solid $color-negrobasico_usogeneral;
+/*         border: 1px solid $color-negrobasico_usogeneral; */
         padding-left: 2px;
         padding-right: 2px;
 
     }
 
+    .containerbarraorden {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: flex-start;
+        height: 5vh;
+        //* Se puede omitir si la altura del componente esta definida */
+        border: 1px solid $color-negrobasico_usogeneral;
+    }
 
     .barraorden {
         border: 1px solid $color-negrobasico_usogeneral;
@@ -293,17 +304,7 @@
     }
 
 
-    .containerbarraorden {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        align-content: flex-start;
-        height: 3vh;
-        //* Se puede omitir si la altura del componente esta definida */
-        border: 1px solid $color-negrobasico_usogeneral;
-    }
+
 
     .framedepaginas {
         @include tamanio(100vw, 60vh);
