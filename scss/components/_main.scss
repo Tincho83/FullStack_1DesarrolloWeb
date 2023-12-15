@@ -8,76 +8,68 @@
 //* ********************************************************* Inicio Estilos para Mobile First */
 @media only screen and (min-width: $dimMobile) {
 
-    //* Inicio Contenido Principal */
-    .contenedorprincipal {
-        padding: 30px 0px 0px 0px;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        margin: 0px;
-    }
-
     .portada {
         color: $color-negrobasico_usogeneral;
         font-size: 1.3rem;
         padding: 5px 0px 0px 35vw;
     }
 
-    .carousel-inner {
-        @include tamanio(240px, 240px);
+    //* Inicio Contenido Principal */
+    .contenedorprincipal {
+        padding: 30px 0px 0px 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin: 0px;
+
+        .img_barraorden {
+            width: 16px;
+            height: 16px;
+        }
+
+        .contenedorprincipal_divcontenedorFlex {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: stretch;
+            align-content: stretch;
+
+            @for $i from 1 through 3 {
+                .contenedorprincipal_divcontenedorFlex_elementosflex:nth-child(#{$i}) {
+                    display: block;
+                    flex-grow: 0;
+                    flex-shrink: 1;
+                    flex-basis: auto;
+                    align-self: auto;
+                    order: 0;
+                }
+            }
+        }
+
+        .contenedorprincipal_divcontenedorFlex_elementosflex {
+            .carousel-inner {
+                @include tamanio(240px, 240px);
+
+                .carousel-item {
+                    transition-duration: 1s;
+                    transition-timing-function: ease-in;
+                    transition-delay: 1s;
+                    transition-property: none;
+                    text-align: center;
+                }
+
+            }
+
+        }
     }
 
-    .carousel-item {
-        transition-duration: 1s;
-        transition-timing-function: ease-in;
-        transition-delay: 1s;
-        transition-property: none;
-        text-align: center;
-    }
-
-
-    .contenedorprincipal_divcontenedorFlex {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: stretch;
-        align-content: stretch;
-    }
-
-    .contenedorprincipal_divcontenedorFlex_elementosflex:nth-child(1) {
-        display: block;
-        flex-grow: 0;
-        flex-shrink: 1;
-        flex-basis: auto;
-        align-self: auto;
-        order: 0;
-    }
-
-    .contenedorprincipal_divcontenedorFlex_elementosflex:nth-child(2) {
-        display: block;
-        flex-grow: 0;
-        flex-shrink: 1;
-        flex-basis: auto;
-        align-self: auto;
-        order: 0;
-    }
-
-    .contenedorprincipal_divcontenedorFlex_elementosflex:nth-child(3) {
-        display: block;
-        flex-grow: 0;
-        flex-shrink: 1;
-        flex-basis: auto;
-        align-self: auto;
-        order: 0;
-    }
-
-    .containerEjemplo {
+    .contmensaje {
         width: 100%;
         padding-left: 10px;
     }
 
-    .containerEjemplo_block,
-    .containerEjemplo_inline-block {
+    .contmensaje_block,
+    .contmensaje_inline-block {
         width: 100%;
         padding: 10px 10px 0px 0px;
         text-align: center;
@@ -85,9 +77,10 @@
         font-size: 11px;
     }
 
-    .containerEjemplo_inline-block {
+    .contmensaje_inline-block {
         display: none;
     }
+
 
     .row {
         margin-left: 2px;
@@ -145,7 +138,6 @@
     .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_pNombreProducto {
         font-size: 9px;
         margin-bottom: 0.2rem;
-        font-weight: bold;
     }
 
     .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_checkbxComparar {
@@ -153,7 +145,7 @@
     }
 
     .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_checkbxComparar_label {
-        font-size: 9px;
+        @extend .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_pNombreProducto;
     }
 
     .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_imgproducto {
@@ -164,31 +156,27 @@
 
     .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_pMarcaProducto {
         padding-top: 10px;
-        font-size: 9px;
-        margin-bottom: 0.2rem;
+        @extend .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_pNombreProducto;
         visibility: visible;
     }
 
     .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_pModeloProducto {
-        font-size: 9px;
-        margin-bottom: 0.2rem;
+        @extend .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_pNombreProducto;
         visibility: visible;
     }
 
     .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_pPrecioProducto {
-        font-size: 9px;
-        margin-bottom: 0.2rem;
+        @extend .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_pNombreProducto;
         visibility: visible;
     }
 
     .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_pPagoProducto {
-        font-size: 9px;
-        margin-bottom: 0.2rem;
+        @extend .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_pNombreProducto;
     }
 
     .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_btnAgregarCarrito {
         text-transform: uppercase;
-        font-size: 9px;
+        @extend .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_pNombreProducto;
 
     }
 
@@ -206,9 +194,7 @@
         }
 
         h2 {
-            text-align: center;
-            font-style: normal;
-            font-weight: bold;
+            @extend h3;
             font-size: 22px;
             color: $color-rojobasico_usogeneral;
         }
@@ -280,13 +266,14 @@
         align-self: auto;
         @include tamanio(auto, auto);
         border: 1px solid $color-negrobasico_usogeneral;
+        padding-left: 2px;
+        padding-right: 2px;
 
     }
 
 
     .barraorden {
         border: 1px solid $color-negrobasico_usogeneral;
-
     }
 
     .container {
@@ -404,22 +391,6 @@
         vertical-align: baseline;
     }
 
-    .p_mediosPago {
-        font-family: inherit;
-        box-sizing: border-box;
-        margin: 0px 0px 1em;
-        padding: 0px;
-        border: 0px;
-        font-style: inherit;
-        font-variant: inherit;
-        font-weight: inherit;
-        font-stretch: inherit;
-        font-size: inherit;
-        line-height: 1.4285em;
-        vertical-align: baseline;
-        font-weight: bold;
-    }
-
     .p_mediosPago_nobold {
         font-family: inherit;
         box-sizing: border-box;
@@ -433,6 +404,11 @@
         font-size: inherit;
         line-height: 1.4285em;
         vertical-align: baseline;
+    }
+
+    .p_mediosPago {
+        @extend .p_mediosPago_nobold;
+        font-weight: bold;
     }
 
 }
@@ -449,11 +425,11 @@
     }
 
 
-    .containerEjemplo_block {
+    .contmensaje_block {
         display: none;
     }
 
-    .containerEjemplo_inline-block {
+    .contmensaje_inline-block {
         display: inline-block;
         width: auto;
         padding: 15px 0px 15px 0px;
@@ -467,7 +443,7 @@
     .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento {
         border: 1px solid $color-rojouno_usogeneral;
         width: 100%;
-        padding: 15px;
+        padding: 10px;
         text-align: center;
         background-color: $color-celesteuno_usogeneral;
         margin: 10px 0;
@@ -504,16 +480,17 @@
 
 //* ********************************************************* Estilos para Desktop Last */
 @media only screen and (min-width: $dimDesktop) {
-    .carousel-inner {
-        @include tamanio(350px, 350px);
-
-    }
 
     .portada {
         font-size: 1.4rem;
     }
 
-    .containerEjemplo_inline-block {
+    .carousel-inner {
+        @include tamanio(350px, 350px);
+
+    }
+
+    .contmensaje_inline-block {
         display: inline-block;
         width: auto;
         padding: 15px 0px 15px 0px;

@@ -9,11 +9,11 @@
 //* ********************************************************* Inicio Estilos para Mobile First */
 @media only screen and (min-width: $dimMobile) {
 
-    
+
     //* Inicio: Tags y bootstrap */
     body {
         background-image: linear-gradient(to top, $color-celesteuno_usogeneral, $color-celestecielo_usogeneral);
-        overflow: hidden;
+        /*         overflow: hidden; */
     }
 
     h1 {
@@ -80,7 +80,7 @@
 
         &:hover {
             color: $color-azulclaro_a_hover;
-            font-weight: bold;
+            font-weight:300;
         }
 
     }
@@ -242,14 +242,14 @@
         justify-content: space-between;
         margin-top: 0px;
         margin-bottom: 0px;
-        padding: $sinseparacion;
+        padding: 5px 3px 0px 5px;
 
     }
 
     .cabecera_divPanelWeb_divMenuflex_divPanelCuentaCarrito_ul_li {
         display: inline;
-        padding: $sinseparacion;
-        margin-bottom: 00px;
+        padding-right: 5px;
+        margin-bottom: 0px;
         font-size: 14px;
         text-align: center;
 
@@ -270,7 +270,7 @@
     }
 
     .cabecera_divPanelWeb_divMenuflex_divPanelCuentaCarrito_ul_li_a_img {
-        @include tamanio(30px, 25px);
+        @include tamanio(25px, 25px);
         padding: $sinseparacion;
         margin-top: 0px;
     }
@@ -387,7 +387,6 @@
 
     h1 {
         display: inline;
-        font-size: 14px;
         margin-bottom: 0rem;
     }
 
