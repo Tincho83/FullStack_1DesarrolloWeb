@@ -1,8 +1,11 @@
 .git
 backup
 borrador
+fonts
 Maquetado
 Wireframe
+.gitignore
 Captura.PNG
 gt.bat
 sw.bat
+swn.bat

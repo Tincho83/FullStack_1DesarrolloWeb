@@ -59,8 +59,8 @@ echo *** Inicio Subiendo Correcciones de Proyecto a GitHub ***
 "D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" add .
 "D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" status
 set /p Input="Ingrese descripcion commit:" 
-"D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" commit -m "Modificacion %Input%"
-"D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" push -u origin master
+"D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" commit -m "Modificacion 11012024a"
+"D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" push -u origin dev
 echo *** Completado Subiendo Proyecto a GitHub ***
 goto menu
 
