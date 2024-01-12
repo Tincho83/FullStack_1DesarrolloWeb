@@ -54,12 +54,15 @@ goto menu
 
 :SubirCorrecciones
 echo *** Inicio Subiendo Correcciones de Proyecto a GitHub ***
+c:\
+cd "C:\Proyectos\ioCom"
+cls
 "D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" init
 "D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" status
 "D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" add .
 "D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" status
 set /p Input="Ingrese descripcion commit:" 
-"D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" commit -m "Modificacion 11012024a"
+"D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" commit -m "Modificacion 11012024"
 "D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" push -u origin dev
 echo *** Completado Subiendo Proyecto a GitHub ***
 goto menu
