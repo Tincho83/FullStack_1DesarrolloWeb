@@ -81,12 +81,15 @@ exit
 
 
 echo Dev
+c:
+cd \
+cd "C:\Proyectos\ioCom"
 "D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" init
 "D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" checkout dev
 "D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" status
 "D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" add .
 "D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" status
-"D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" commit -m "Modificacion ..."
+"D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" commit -m "Modificacion p7"
 "D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" push -u origin dev
 
 echo Master
@@ -95,5 +98,5 @@ echo Master
 "D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" status
 "D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" add .
 "D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" status
-"D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" commit -m "Modificacion ..."
+"D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" commit -m "Modificacion master3"
 "D:\ProgramFilesPort\PortableGit-2.43.0-64-bit\bin\git.exe" push -u origin master
