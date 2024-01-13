@@ -127,6 +127,7 @@ decoracion: none
   }
   .btn {
     --bs-btn-font-size: 0.75rem;
+    margin-left: 5px;
   }
   .dropdown-menu {
     --bs-dropdown-min-width: 19rem;
@@ -203,7 +204,7 @@ decoracion: none
     order: 0;
   }
   .cabecera_divPanelWeb_divMenuflex_divMenuDropdown {
-    margin-left: 1px;
+    margin-left: 3px;
   }
   .dropdown-menu {
     background-image: linear-gradient(to top, rgba(204, 204, 204, 0.96), rgba(255, 255, 255, 0.96));
@@ -535,11 +536,11 @@ decoracion: none
     padding: 0px 0px 0px 10px;
   }
   .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico {
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    margin: 20px;
     border-radius: 1%;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
   }
   .contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico h2 {
     padding-top: 10px;
